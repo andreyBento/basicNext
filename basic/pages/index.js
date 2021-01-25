@@ -1,9 +1,10 @@
 import styles from '../styles/Home.module.scss';
+import Menu from '../components/Menu/Menu';
 
-export default function Home() {
+export default function Base() {
   return (
-    <div className={styles.container}>
-        <h1 className={styles.h1}>Teoria</h1>
+    <div className="container">
+      <Menu />
     </div>
   )
 }

@@ -1,7 +1,12 @@
+@import "variables";
+@import "mixins";
+
 html,
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  background-color: $primary;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 16px;
 }
@@ -14,4 +19,67 @@ a {
 * {
   box-sizing: border-box;
   outline: none;
+}
+
+.titulo{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 700;
+
+  &.h1{
+    font-size: 26px;
+
+    @include min-1000{
+      font-size: 32px;
+    }
+  }
+
+  &.h2{
+    font-size: 22px;
+
+    @include min-1000{
+      font-size: 28px;
+    }
+  }
+
+  &.h3{
+    font-size: 20px;
+
+    @include min-1000{
+      font-size: 26px;
+    }
+  }
+
+  &.h4{
+    font-size: 18px;
+
+    @include min-1000{
+      font-size: 24px;
+    }
+  }
+
+  &.h5{
+    font-size: 16px;
+
+    @include min-1000{
+      font-size: 22px;
+    }
+  }
+
+}
+
+.container{
+  width: calc(100% - 96px);
+  height: calc(100% - 96px);
+  background-color: $gray-2;
+  border-radius: 40px;
+}
+
+#__next{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
